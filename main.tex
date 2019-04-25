@@ -43,11 +43,15 @@
 
 \usepackage{xargs}
 
+% time and memory limits macro
 \newcommandx{\MakeLimits}[2][1=1000 ms, 2=65536 kB]{
     \begin{center}
         \large{Time Limit: #1 \hspace{20pt} Memory Limit: #2}
     \end{center}
 }
+
+% sample input and output macro
+\newenvironment{data}{\ttfamily}{\par}
 
 \title{\textbf{PKU Campus 2019\\Contest Problem Set}}
 \date{\textbf{May 12th, 2019}}
