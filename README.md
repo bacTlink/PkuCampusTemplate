@@ -1,7 +1,9 @@
 # PkuCampusTemplate
 
-An ACM Problem Set Template.
-It is easy to modify it to suit any ACM contest.
+A Latex ACM Problem Set Template, which is easy to modify to suit any ACM contest.
+
+It's convenient to add problems, delete problems or change the order.
+It will automatically marks the problem and generates a menu.
 
 # Add a problem
 
