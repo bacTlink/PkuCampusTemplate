@@ -10,7 +10,7 @@ It will automatically marks the problem and generates a menu.
 1. Copy the ```Template.tex``` file.
 2. Fill in the ```Description``` and other necessary subsections.
 3. Modify time and memory limits.
-4. Include the copied file in ```main.tex``` in proper order.
+4. Include the copied file in ```ProblemList.tex``` in proper order.
 
 # Compile
 
