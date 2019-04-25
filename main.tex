@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption,subcaption}
+\usepackage{xcolor}
+\usepackage{ctex}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{comment}
+\usepackage{xifthen}
+\usepackage{titlesec}
+\usepackage{forloop}
+\usepackage{lastpage}
+\usepackage{totcount}
+\usepackage[inline, shortlabels]{enumitem}
+\usepackage{amsmath}
+\usepackage{array}
+
+% section counter
+\newtotcounter{section_cnt}
+
+% set page
+\geometry{left=2cm,right=2cm,top=3cm,bottom=2cm}
+
+% section format
+\renewcommand\thesection{\Alph{section}}
+\titleformat{\section}[block]{\Huge\filcenter\textbf}{\thesection.}{1em}{}
+\titleformat{\subsection}[hang]{\bfseries}{}{1em}{}
+
+% count section
+\usepackage{letltxmacro}
+\LetLtxMacro{\oldsection}{\section} \renewcommand{\section}[1]{\oldsection{#1}\label{\thesection}\stepcounter{section_cnt}}
+
+% input tex files
+\renewcommand{\include}[1]{\input{"#1.tex"}}
+
+% set enumerate padding
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+
+\usepackage{xargs}
+
+\newcommandx{\MakeLimits}[2][1=1000 ms, 2=65536 kB]{
+    \begin{center}
+        \large{Time Limit: #1 \hspace{20pt} Memory Limit: #2}
+    \end{center}
+}
+
+\title{\textbf{PKU Campus 2019\\Contest Problem Set}}
+\date{\textbf{May 12th, 2019}}
+\author{\textbf{Peking University}}
+
+\begin{document}
+\maketitle
+
+\label{FirstPage}
+
+\vspace{90pt}
+\begin{center}
+This problem set contains \number\totvalue{section_cnt} problems; pages are numbered from \pageref{FirstPage} to \pageref{LastPage}.
+\end{center}
+
+\vspace{90pt}
+\textbf{Attention:}
+\begin{enumerate}
+    \item The input must be read from standard input.
+    \item The output must be written to standard output.
+    \item If you use long long in your gcc/g++ program, make sure you use ``\%lld'' instead of ``\%I64d'' while reading or writing long long value.
+    \item Due to possible changes during the contest, please refresh the web frequently.
+\end{enumerate}
+
+\clearpage{}
+
+\include{Menu}
+
+\include{WuXing}
+
+\include{Template}
+
+\end{document}
+

@@ -1,0 +1,27 @@
+\newgeometry{left=2cm,right=2cm,top=4.8cm,bottom=2cm}
+
+\newcommand{\addline}[1]{\rule{0pt}{2.1em} \Large{\ref{#1}} & 
+\Large{\nameref{#1}} & \Large{\pageref{#1}} \\ [1ex] }
+
+\begin{table}[ht]
+
+\centering
+\caption*{\Huge{Problem List}}
+
+\newcounter{it}
+\begin{tabular}{>{\centering\arraybackslash}p{1.8cm} c >{\centering\arraybackslash}p{1.8cm}}
+\hline
+\rule{0pt}{2.4em} \LARGE{ID} & \LARGE{Title} & \LARGE{Page} \\ [1ex]
+\hline
+  \setcounter{it}{1}
+  \whiledo{\theit<\totvalue{section_cnt}}{
+    \addline{\Alph{it}}
+    \stepcounter{it}
+  }
+  \addline{\Alph{it}}
+  \hline
+\end{tabular}
+
+\end{table}
+\restoregeometry
+\clearpage{}
