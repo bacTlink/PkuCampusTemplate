@@ -33,7 +33,9 @@
 \LetLtxMacro{\oldsection}{\section} \renewcommand{\section}[1]{\oldsection{#1}\label{\thesection}\stepcounter{section_cnt}}
 
 % input tex files
-\renewcommand{\include}[1]{\input{"#1.tex"}}
+\renewcommand{\include}[1]{\input{"#1.tex"}
+
+}
 
 % set enumerate padding
 \setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
@@ -74,9 +76,7 @@ This problem set contains \number\totvalue{section_cnt} problems; pages are numb
 
 \include{Menu}
 
-\include{WuXing}
-
-\include{Template}
+\include{ProblemList}
 
 \end{document}
 
